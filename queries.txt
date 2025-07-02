@@ -1,0 +1,48 @@
+1) mongod --version
+
+2) mongosh
+
+3) show dbs
+
+4) use schoolDB
+
+5) db.createCollection("Student")
+
+6) db.Student.insertOne({name:"xyz",age:13,std:"11th",gender:"male",position:"jr.sde",salary:1234567,city:"Gandhinagar",email:"i@gmail.com"})
+
+7) show dbs
+
+8) db.Student.find()
+
+9) schoolDB> db.Student.insertMany([{},{}])
+
+10) db.Student.find({gender:"female"})
+
+11) db.Student.find({},{name:1})
+
+12) db.Student.find({},{name:1,_id:0})
+
+13) db.Student.find({},{name:1,_id:0,age:0})-->Cannot do exclusion on field age in inclusion projection
+
+14) db.Student.updateOne({name:"xyz"},{$set:{name:"PQR",salary:500000}})
+
+15) db.Student.updateMany({position:"jr.sde"},{$set:{position:"sr.sde"}})
+
+16) db.Student.deleteOne({name:"PQR"})
+
+17) db.Student.renameCollection("Students")
+
+18) db.Students.updateOne({},{$set:{position:"tester"}})
+
+19) db.Students.find().count()
+
+20) db.Students.countDocuments()
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+QUES: Insert 5 documents with random data with fields_id,company,price and model 
+	Display price and company of car which are of particular model.
+	Update all cars by adding field quantity  and a random value.
+	Display the name of car with highest price among all cars.
+	Delete the record of car if price is 10lacs 
+	Arrange all the cars in descending order according to price 
+
+Soln: 
