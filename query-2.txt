@@ -1,0 +1,38 @@
+ db.people.find()
+
+ db.people.find({age:{$eq:30}})
+
+ db.people.find({age:{$ne:30}})
+
+db.people.find({age:{$lt:30}})
+
+db.people.find({age:{$lte:40}})
+
+db.people.find({age:{$gt:40}})
+
+db.people.find({age:{$gte:40}})
+
+db.people.find({age:{$in:[25,50]}})
+
+db.people.find({age:{$nin:[25,50]}})
+
+db.people.find({$and:[{name:"z"},{age:30}]})
+
+db.people.find({name:"z",age:30})
+
+db.people.find({$or:[{name:"z"},{age:30}]})
+
+db.people.find({$or:[{name:"x"},{age:30}]})
+
+db.people.find({age:{$not:{$lt:25}}})
+
+db.people.find({$nor:[{name:"w"},{age:60}]})
+
+db.people.updateMany({},{$inc:{age:5}})
+
+db.people.updateMany({},{$mul:{age:5}})
+
+db.people.updateMany({},{$rename:{'name':'uname'}})
+
+db.people.updateMany({},{$currentDate:{lastModified:{$type:"date"}}})
+
